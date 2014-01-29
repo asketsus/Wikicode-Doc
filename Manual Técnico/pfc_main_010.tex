@@ -1,0 +1,311 @@
+%!TEX root=./pfc.tex
+\chapter[Introducción al problema]{\label{}
+Introducción al problema}
+
+\section{Introducción}
+
+Los avances en la tecnología en los últimos años han aportado nuevas perspectivas y desafíos al proceso de enseñanza y aprendizaje. Ya nadie pone en duda que el ordenador es un medio didáctico muy potente y que puede, y de hecho lo está haciendo, cambiar la forma de enseñar de los profesores y el modo de aprender de los alumnos. Una parte fundamental en este nuevo proceso de aprendizaje es sin duda Internet. Con la facilidad de adquisición de la información en esta red global, el profesor pasa a tener el papel fundamental de ayudar al alumno a interpretar los datos, a relacionarlos y a contextualizarlos. Sin embargo, el volumen de informaciones no permite alcanzar todos los contenidos que caracterizan un área de conocimiento. Por lo tanto, profesores y alumnos necesitan aprender a aprender cómo acceder a la información, dónde buscarla y qué hacer con ella.
+
+Ahora, cuando un alumno procede a buscar información en Internet o trabaja con un software educativo, el protagonista ya no es el profesor sino el propio alumno, quien por su cuenta investiga, comprende, lee y aprende.
+
+Para poner en práctica todo esto, y ayudar tanto al profesor como al alumno, existen un gran número sistemas de gestión de aprendizaje. Existen numerosas plataformas (LMS, por sus siglas en ingles), entre las que podemos nombrar: Atutor \cite{atutor}, WebCT \cite{webct}, Moodle \cite{moodle}, Ilias \cite{ilias}, etc. Aunque cada una de ellas tiene sus propias peculiaridades, todas poseen unos fundamentos teóricos comunes. Dichos fundamentos están relacionados con el uso de aprendizaje colaborativo, con la gestión y organización de los procesos de trabajo así como con la importancia del proceso de aprendizaje.
+
+Sin embargo, aunque todas estas plataformas ofrecen una serie de herramientas para ser utilizadas en el aprendizaje colaborativo, no todas son igual de propicias para dicho aprendizaje. 
+
+El aprendizaje colaborativo es un tipo de aprendizaje en grupo en el que los alumnos aprenden gradualmente, y en el que no existe ningún tipo de competencia entre ellos. Dicho de otro modo, los alumnos colaboran para mejorar el conocimiento grupal y pueden ser elementos de ayuda para el aprendizaje de otros compañeros.
+
+Por ende, es evidente que el elemento básico para aprender colectivamente se trata de la interacción y la comunicación entre los alumnos, ayudándose entre todos del conocimiento común y aportando individualmente.
+
+En cuanto a la gestión y organización, la tecnología e-learning no nos proporciona únicamente la ayuda para la interacción de los alumnos, sino que aprovecha sus ventajas para gestionar, organizar y facilitar el trabajo del grupo en las tareas de aprendizaje. Además, nos permite monitorizar, analizar y mejorar los procedimientos de trabajo.
+
+Sin apartarnos de la línea argumental de esta introducción, también podemos observar como la programación informática ha pasado a ser un área estratégica importante dentro de cualquier sector técnico o científico en nuestra sociedad. Es por este motivo que no se da docencia de ella únicamente en los grados informáticos, sino que cada vez es más común su derivación hacia otras áreas.
+
+Sin embargo, es bastante amplia la dificultad que supone para alguien que no haya estado en contacto con el sector informático aprender a programar en la gran mayoría de ocasiones. Esto no sucede con todos los casos, muchas veces se puede aprovechar la capacidad de algún alumno que ya maneje estos conocimientos con anterioridad o simplemente tenga la habilidad para ello en beneficio del resto de compañeros.
+
+Es por ello que una vez conocidas las principales características de las plataformas e-learning, podemos observar que se trata de una herramienta idónea para que los alumnos más aventajados sobre el sector de la programación puedan compartir sus conocimientos e interactuar de una manera que el profesor considere oportuna con el resto de compañeros. A su vez, se trata de un sistema perfecto para que el profesor pueda evaluar los conocimientos de todos los alumnos sin necesidad de valorarlos individualmente.
+
+\newpage
+
+\section{Estudio del problema}
+
+En esta sección se tratarán de identificar las necesidades que pretendemos cubrir así como de definir el principal objetivo a alcanzar con el desarrollo del proyecto, mostrando las alternativas y posibilidades mediante las cuales será posible conseguir el resultado que deseamos.
+La enumeración de las necesidades y la definición del problema podrán llevarse a cabo desde dos puntos de vista diferentes. Por un lado, se intentará identificar el problema desde la perspectiva del cliente (problema real) y, por otro, se intentará presentar la forma de dar solución a dichas necesidades desde un punto de vista más técnico.
+
+\subsection{Identificación del problema real}
+
+Como hemos comentado anteriormente, este trabajo se basa fundamentalmente en la colaboración de los alumnos en una comunidad virtual con respecto a la programación informática. En el campo de la enseñanza es tan importante el producto final como el proceso que se ha seguido para obtener dicho conocimiento.
+
+Actualmente se sigue una gran cantidad de distintos métodos lectivos para hacer más llevadero el conocimiento de este área a todo tipo de alumnos. El resultado normalmente es siempre el mismo, un alumno que ya sabe programar con suficiencia realiza el trabajo que el profesor ha preparado para el aprendizaje del grupo, y el resto de usuarios más inexpertos simplemente copia esa práctica y la entrega. La consecuencia de esto es simple, a la hora de evaluar los conocimientos individualmente las calificaciones son bajas, pues en ningún momento han aprendido a programar y en muchos casos ni se ha llegado a hacer el intento.
+
+La programación informática, al contrario que otras materias, requiere de un conocimiento informático previo puesto que el alumno debe de ser capaz de montar un entorno de desarrollo que muchas veces no llega ni a conseguir. Muchos alumnos tienen adversidad por todo lo relacionado con la materia y despejarle el camino es la manera más producente de encontrar buenos resultados.
+
+De esta manera, se ha desarrollado un modelo que nos permite que el usuario programe desde su casa, cuando considere oportuno, sin necesidad de instalar nada en su equipo. Del mismo modo, este sistema obliga al alumno a no copiar e incluso a colaborar para realizar prácticas informáticas. Dicho de otro modo, el sistema ha conseguido despejar el camino y hacer más activo al alumno.
+
+\subsection{Identificación del problema técnico}
+
+Para describir los condicionantes del problema técnico se utilizará una técnica denominada PDS (Product Design Specification) que contiene los apartados detallados a continuación.
+
+\subsubsection{Funcionamiento}
+
+El modelo desarrollado proporcionará un nuevo módulo para el entorno Moodle destinado a crear un entorno de desarrollo de programación en C para una edición colaborativa. Dicho módulo deberá tener varias opciones de creación para el profesor y que pueda decidir que tipo de metodología usar (grupal, individual, grupal colaborativa...).  A su vez, aprovechando la ventaja que nos ofrece Moodle, proporcionar una serie de estadísticas que puedan resultar útiles de analizar de cara a un futuro.
+
+La edición de código fuente será colaborativa y en tiempo de ejecución, de modo que los alumnos puedan contemplar que van programando sus compañeros mientras ellos están desarrollando. Debe facilitar la comunicación entre los alumnos y a la vez proporcionar las herramientas correspondientes a cualquier entorno: Compilación, Prueba de ejecutable, Histórico de versiones, etc.
+
+\subsubsection{Entorno}
+
+Como hemos comentado en el punto anterior, el módulo desarrollado se encuentra dentro de Moodle. Por tanto, para acceder a dicho módulo habrá que acceder previamente al curso que debe encontrarse bajo un entorno Moodle. Una vez dentro, el usuario podrá elegir entre varias opciones:
+
+\begin{itemize}
+	\item Si el usuario es profesor/administrador podrá crear tantas Wikis de edición de código como considere oportuno. En su creación, podrá configurar los parámetros del modo que considere adecuado. Además podrá consultar y modificar cada una de ellas cuando considere oportuno.
+	\item Si el usuario es un alumno podrá acceder a todas las Wikis de edición de código que el profesor haya considerado oportuno. Una vez dentro de ella podrá elegir:
+	\begin{itemize}
+		\item Visualizar el código fuente.
+		\item Editar el código fuente.
+		\item Bloquear o desbloquear partes del código para su edición.
+		\item Hablar con el resto de alumnos que estén modificando el código fuente.
+		\item Compilar el código fuente.
+		\item Descargar el ejecutable creado.
+		\item Consultar el histórico de versiones y restaurar, si así lo desea, alguna versión más antigua.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Vida esperada}
+
+La estimación de la vida de un software es un parámetro muy importante pues puede que no merezca la pena realizar un gran esfuerzo en el diseño de un software si después va a tener una vida muy corta. Sin embargo, este parámetro es difícil de calcular pues depende de varios factores, como pueden ser su mantenimiento o nuevas necesidades por parte de los usuarios.
+En cuanto al módulo de Moodle, al tratarse de un software desarrollado para una plataforma determinada de e-learning, se estima que la vida esperada de la aplicación será totalmente dependiente y estará ligada a la vida esperada de dicha plataforma. Debido al auge que ha tenido Moodle en los últimos años así como a la cantidad de ventajas que ofrece, se puede suponer que tendrá una vida muy elevada por lo que nuestra aplicación también la tendrá.
+
+Sin embargo esto no quiere decir que la aplicación no pueda modificarse, ampliarse, añadir nuevas funcionalidades e incluso variar su front-end\footnote{\textbf{Front-end:} Parte del software que interactúa con el o los usuarios.} para adaptarlo a otros sistemas e-learning. 
+
+\subsubsection{Ciclo de mantenimiento}
+
+Aunque no se espera que el software desarrollado sufra modificaciones, cabe la posibilidad de que este sea modificado o actualizado en futuros proyectos e investigaciones, pues está diseñado para que se puedan añadir nuevas características, e incluso dar la posibilidad de seleccionar un lenguaje de programación distinto. Además, se podrá utilizar la potencia de Moodle para permitir la importación de ficheros, la edición de proyectos de varios ficheros, la exportación, etc.
+
+\subsubsection{Competencia}
+
+Pese a que actualmente se está produciendo un gran auge de las comunidades virtuales, aún no hay casos de aplicaciones externas que mezclen una comunidad virtual y un editor de código fuente colaborativo. Si existen numerosos casos de editores colaborativos, los cuales pueden ser online como el nuestro o mediante software. Ejemplo de ellos pueden ser Ethercodes\cite{ethercodes}, Notapipe\cite{notapipe} o Amy Editor\cite{amyeditor}. Estos casos serán comentados con mayor profundidad en capítulos posteriores.
+
+\subsubsection{Aspecto Externo}
+
+La aplicación desarrollada será presentada en CD-ROM, pues aunque la capacidad de almacenamiento que requiere la misma no es muy elevada, se considera más oportuno este dispositivo por ser más resistente, duradero y manejable.
+Además, la aplicación irá acompañada de un manual de usuario, en el que se explicará la instalación, configuración y manejo del programa de la forma más sencilla y clara posible. Junto con este manual, se entregará un manual de código, por si el usuario desea realizar alguna consulta más técnica.
+
+\subsubsection{Estandarización}
+
+El diseño de la aplicación se ha realizado de forma tal que la aplicación usuario pueda ejecutarse en cualquier Sistema Operativo, ya sea de tipo Windows, Linux, Mac o de cualquier otro. Además, se han procurado utilizar los elementos de la forma más estándar posible, como es el caso del mismo Moodle así como la filosofía de comunicación utilizada (cliente-servidor), los lenguajes de programación utilizados (PHP y Javascript), la base de datos (mySQL), el formato en el que se ofrecen los ejecutables (.exe para Windows, .out para los OS basados en Unix), etc.
+
+\subsubsection{Calidad y fiabilidad}
+
+La calidad y la fiabilidad son campos que cada vez van tomando mayor importancia en la sociedad. Por ello, ambos han sido muy tenidos en cuenta a la hora de diseñar la aplicación.
+De esta manera, este proyecto ha sido desarrollado identificando los puntos o elementos de riesgo o de mayor probabilidad de fallo e intentando minimizar esta probabilidad.
+
+El principal riesgo es la sincronización de código, tanto con el sistema como con el resto de usuarios, de modo que dos usuarios que no estén comunicados entre si puedan estar intentando modificar lo mismo. Para esto se han creado una serie de restricciones, dotando al sistema de bloqueos y desbloqueos que son debidamente comunicados a los usuarios. El sistema se encargará de que ningún usuario pueda modificar una parte de código bloqueada por otro usuario.
+
+Otro de los posibles riesgos es la sobrecarga del servidor, ya que varias alumnos pueden estar intentando paralelamente comunicarse con este para ir guardando su código. Sin embargo, el sistema ha sido programado para comunicarse con el servidor exclusivamente en situaciones críticas, como puede ser el bloqueo o desbloqueo de funciones o las modificaciones de bloques en el código. De este modo, el sistema queda libre de la mayoría del porcentaje de carga que este módulo le pueda ocasionar.
+
+\subsubsection{Programa de tareas}
+
+A continuación se va a desarrollar el programa detallado de la realización del proyecto a lo largo del tiempo:
+
+\begin{itemize}	\item \textbf{Fase de preparación:} Esta primera fase supone un proceso de investigación y de documentación del material, tanto gráfico como interactivo, que se ha utilizado en el desarrollo del software y que se expondrán más adelante en el apartado de bibliografía.	\item \textbf{Elección de plataforma e-learning:} En dicha fase se realizará un estudio de las distintas plataformas e-learning existentes en la actualidad así como un estudio comparativo de las mismas. De esta manera, se expondrá cual de las plataformas ha sido elegida y cuales han sido los motivos que han dado lugar a dicha elección.	\item \textbf{Análisis y diseño del módulo y del editor colaborativo:} En esta fase se realizará el análisis y el diseño tanto del módulo que sirve como interfaz para acceder a la aplicación de edición de código como de la aplicación que realiza el propio editor colaborativo.	\item \textbf{Implementación del módulo y del editor colaborativo:} En esta fase se llevará a cabo la implementación del software que permitirá acceder al editor desde la plataforma seleccionada así como la implementación del editor de código fuente colaborativo.	\item \textbf{Realización de pruebas:} Para asegurar el correcto comportamiento de toda la aplicación se deberán realizar una serie de pruebas y un análisis exhaustivo de los resultados.	\item \textbf{Documentación de la memoria y anexos:} En esta fase se ha elaborado la memoria, el manual de usuario y el manual de código. La elaboración de la mayoría de las partes de la memoria se ha realizado conjuntamente con el diseño de la aplicación para una mayor coherencia del documento.
+\end{itemize}
+
+\subsubsection{Pruebas}
+
+Las pruebas que se van a realizar comenzarán por las de la caja negra o pruebas funcionales. Se tendrá especial cuidado con los valores límite y con la reacción del sistema a cualquier tipo de acción que realice el usuario.
+Se realizará también la prueba de la caja blanca en aquellas partes donde la caja negra no ha obtenido unos resultados óptimos o en aquellas partes donde haya un funcionamiento complicado.
+
+Por último, se realizará la prueba de aceptación, en donde intervendrán una o varias personas distintas al autor, y la prueba del sistema, para comprobar que se cumplen todos los requisitos y que el propio sistema responde a situaciones límite y de sobrecarga.
+La aplicación se dará por válida cuando se hayan corregido todos los errores encontrados en las pruebas anteriores y se cumplan con los objetivos para los cuales se diseñó.
+
+\subsubsection{Seguridad}
+
+El módulo desarrollado se ha diseñado de tal forma que el usuario no pueda cometer errores que afecten al sistema y si los comete que éste no se vea involucrado. A su vez se limitará al usuario a realizar una serie de acciones que puedan poner en peligro la estabilidad del sistema.
+
+De la misma manera, como la aplicación es de libre distribución no tiene sentido la seguridad contra copias no autorizadas.
+
+\newpage
+
+\section{Objetivos}
+
+Con la realización de este proyecto se han intentando alcanzar los siguientes objetivos:
+
+\begin{itemize}
+	\item Utilizar la filosofía Open Source, término con el que se conoce al software distribuido y desarrollado libremente. El código abierto tiene un punto de vista más orientado a los beneficios prácticos de poder acceder al código, que a las cuestiones éticas y morales las cuales se destacan en el software libre.
+	\item Crear un sistema, que pese a estar embebido dentro un sistema de E-learning, nos proporcione una imagen similar a la de una plataforma de desarrollo. Entre sus características nos debemos encontrar:
+	\begin{itemize}
+		\item Capacidad de almacenar un histórico de código fuente al igual que un servidor SVN.
+		\item Mantener toda la filosofía del sistema e-learning. No debe de modificar su interfaz, su sistema de instalación, su sistema de permisos y no planteará problema de compatibilidad más allá que los del propio sistema e-learning.
+		\item Utilización de un editor que reconozca palabras claves, funciones, estructuras, símbolos, cadenas, etc. de modo que parsee\footnote{\textbf{Parser: } Analizador sintáctico que convierte el texto de entrada en otras estructuras.} el código y ayude al usuario dando formato a este.
+		\item Reconocer en el editor estructuras más complejas como comentarios o definiciones y mostrarlos en un color diferente para que el usuario pueda distinguirlos.
+		\item Tener un sistema de bloqueos parciales dentro del código, delimitado por funciones, de modo que se permita la programación simultánea del mismo fichero. El usuario podrá ver claramente las partes que son modificables y a la vez podrá ir viendo las modificaciones de otros usuarios sin necesidad de actualizar. 
+		\item Tener un sistema de comunicación que permita a los usuarios conversar entre ellos de modo síncrono.
+		\item El editor debe facilitar la programación del usuario, informando a este sobre que línea se encuentra y permitiendo la búsqueda en el interior del código fuente.
+		\item El sistema debe informar de los mensajes de error para que el usuario pueda corregirlos, informando de la línea donde se encuentra.
+	\end{itemize}
+	\item Utilizar la nomenclatura, tanto en código como en el modelo de datos, de la plataforma e-learning seleccionada.
+\end{itemize}
+
+\section{Antecedentes}
+
+Como se ha comentado en los apartados anteriores, la edición de código fuente de modo colaborativo es un tema ampliamente abordado y que se encuentra en pleno auge en la actualidad. Este proyecto ha tomado la idea de numerosos sistemas utilizados para tareas similares. Dentro de éstos se pueden destacar los siguientes:
+
+\begin{itemize}
+
+	\item \textbf{EclipseGavab\cite{eclipsegavab}:} Entorno de desarrollo integrado con características colaborativas que permiten la implementación del Aprendizaje Basado en Proyectos en titulaciones online de Informática. Dispone, entre otras características, de mensajería instantánea y edición compartida de código, funcionalidades que permiten que el profesor supervise el trabajo de forma telemática y que los alumnos colaboran virtualmente. EclipseGavab soporta la programación en varios lenguajes de programación de distintos paradigmas y características, entre ellos Pascal, C y Java, de forma que pueda utilizarse en diferentes asignatura a lo largo de la titulación.
+
+	\item \textbf{AmyEditor\cite{amyeditor}:} Herramienta web para desarrolladores de edición colaborativa de código fuente. Tiene varias características útiles como la sangría inteligente, resaltado de sintaxis, plegado de código, atajos de teclado personalizables y muchos más. Se pueden organizar los documentos en proyectos y abrir varios ficheros a la vez utilizando pestañas. Este sistema actualmente soporta JavaScript, Ruby, PHP, C\#, Java, HTML (HyperText Markup Language), Python etc.
+	
+	\item \textbf{Ethercodes\cite{ethercodes}:} Editor de código fuente para codificar en la nube\footnote{\textbf{Computación en la nube: } Concepto conocido también bajo los términos servicios en la nube, informática en la nube, nube de cómputo o nube de conceptos, del inglés cloud computing, es un paradigma que permite ofrecer servicios de computación a través de Internet.} aún en etapa alfa. No compila ni interpreta código alguno. En este sentido, es una herramienta complementaria para el desarrollador.
+	
+	\item \textbf{Notapipe\cite{notapipe}:} Editor de texto online colaborativo en tiempo real para desarrollar sitios webs. Varios usuarios pueden editar archivos al mismo tiempo y ver en tiempo real los cambios en los archivos de edición. Basado en la Web, soporta Firefox, Internet Explorer, Safari, Google Chrome y Opera. Tiene resaltado de sintaxis en lenguajes de programación web: HTML, CSS, JS y PHP. En la versión gratuita sólo pueden trabajar tres usuarios simultáneamente, es en versiones de pago donde pueden trabajar desde 6 hasta 9 usuarios en \emph{realtime}.
+	
+	\item \textbf{JSBin\cite{jsbin}:} Servicio online que nos permite introducir código HTML, CSS y JavaScript y verificar su funcionamiento. Está pensado para que los desarrolladores puedan trabajar de manera colaborativa pero, es abierto a cualquier usuario. Podemos editar sin dificultades, incluir alguna de las librerías más comunes e incluso, guardar la URL del proyecto y hacerla pública.
+	
+	\item \textbf{Mozilla Skywriter\cite{skywriter}:} Entorno de desarrollo en el que los datos se pueden acceder desde cualquier máquina. Esto permite a los desarrolladores colaborar en proyectos a través de una interfaz única accediendo a ella por un navegador web. Soporta HTML, CSS, PHP, Python, C\#, C, Ruby y JavaScript. No compila ni interpreta código alguno.
+	
+	\item \textbf{Open Cooperative Web Framework\cite{opencoweb}:} Entorno de desarrollo que permite interacción real entre usuarios remotos y fuentes de datos externas. El framework\footnote{\textbf{Framework: }  estructura conceptual y tecnológica de soporte definido, normalmente con artefactos o módulos de software concretos, con base a la cual otro proyecto de software puede ser más fácilmente organizado y desarrollado.} se encarga de notificar a los usuarios y apoyar en la colaboración a los usuarios. No compila ni interpreta código alguno.
+	
+\end{itemize}
+
+Estos ejemplos han sido el punto de partida para la realización de este proyecto, pues el desarrollo del Software se ha llevado a cabo de tal forma que intente imitar el funcionamiento de las mismas, aunque se han intentando realizar una serie de mejoras y adaptaciones, como es el caso de embeberlo dentro de la plataforma de e-learning Moodle.
+
+\section{Restricciones}
+
+En este apartado se expondrán todos aquellos factores que condicionarán la estrategia de diseño en la realización del proyecto. Estas limitaciones se pueden dividir principalmente en dos, la identificación de los factores dato y la identificación de los factores estratégicos. Las restricciones dato, que no podrán ser modificadas, comprenderán sobre todo a las limitaciones presupuestarias y de tiempo, el tipo de hardware existente, el sistema operativo, etc. En cuanto a las restricciones estratégicas, en las que habrá que elegir entre varias posibilidades para cada una, se encontrarán la elección del entorno de trabajo, las herramientas utilizadas, el lenguaje de programación, el tipo de interfaz de usuario, etc.
+
+\subsection{Factores dato}
+
+En cuanto a los factores dato, que son aquellos que no pueden ser modificados a lo largo del desarrollo del proyecto tenemos los siguientes:
+
+\begin{itemize}
+	\item Como factor inicial tenemos principalmente la realización de un editor, de tipo colaborativo, de código fuente en lenguaje C.
+	\item Otro de los factores iniciales que se puede considerar es que el módulo que se desarrolle debe ser intuitivo y accesible, de manera que no acarree ningún tipo de equívoco.
+	\item La utilización de la arquitectura de comunicación cliente-servidor para realizar la comunicación entre el módulo y el usuario final. 
+	\item Además, habrá que añadir todas aquellas indicaciones que se describan en el capítulo \emph{Especificación de Requisitos}.
+\end{itemize}
+
+\subsection{Factores estratégicos}
+
+Estos factores son variables, pues habrá que elegir entre varias posibilidades. De esta manera y como hemos enunciado también anteriormente existen una serie de factores estratégicos:
+
+\begin{itemize}
+	\item \textbf{Elección de la plataforma de aprendizaje.} La elección de la plataforma de aprendizaje ha sido uno de los temas más difíciles de decidir. Si bien, a priori, se comenzó a estudiar la posibilidad de utilizar el sistema Degree para la realización del editor, más adelante se descartó pues se consideró que la opción de Moodle era mucho más ventajosa y provechosa, sobre todo porque tiene una interfaz de tecnología sencilla, ligera y compatible, porque es muy fácil de instalar, porque posee una sólida seguridad en todos sus módulos, porque las áreas de introducción de texto pueden ser editadas usando el sencillo editor de HTML y porque Moodle se ha convertido en el sistema de gestión de cursos más utilizado y conocido del mundo. Debido a que decidir sobre este tema no ha sido trivial, se ha profundizado mucho más en el siguiente capítulo.	
+	\item \textbf{Elección de un lenguaje de programación.} En cuanto a la elección del lenguaje de programación hay que tener en cuenta que se han desarrollado dos módulos totalmente independientes. Por un lado se ha desarrollado la interfaz que permite acceder al editor colaborativo. Un lenguaje estándar para la realización de esta interfaz y que es el más conocido y utilizado para este fin es \textbf{PHP}. Sin embargo, la elección de PHP está supeditada a la elección de plataforma de aprendizaje, hecho que se comentará más adelante. Por otro lado, se ha desarrollado el editor de código colaborativo. Para la implementación de este sistema se ha optado por el lenguaje \textbf{Javascript} debido principalmente a su API\footnote{\textbf{API: }conjunto de funciones y procedimientos (o métodos, en la programación orientada a objetos) que ofrece cierta biblioteca para ser utilizado por otro software como una capa de abstracción.} JQuery, la cual ha servido para de enlace entre el interfaz y el sistema encargado de la edición de código. A su vez, para la programación del editor en si también nos hemos servido de Javascript.	
+	\item \textbf{Elección del gestor de la base de datos.} En cuanto a la elección del gestor de la base de datos nos hemos centrado, para tomar la decisión, en el lenguaje de desarrollo seleccionado, es decir, en PHP. PHP soporta diferentes gestores de base de datos como son MySQL, PostgreSQL, Oracle, ODCB, etc. Sin embargo, se ha decidido utilizar el gestor MySQL pues presenta una serie de ventajas como son:
+		\begin{itemize}
+		\item Trabaja en múltiples plataformas.
+		\item Licencia de uso GPL.
+		\item Es un producto de excelente calidad y velocidad.
+		\item Permite almacenar los datos en distintas arquitecturas de almacenamiento.
+		\item Está muy extendido en aplicaciones de gestión de entorno web por su buena integración con el servidor Web Apache y el lenguaje de programación PHP.
+		\end{itemize}	
+	\item \textbf{Elección del servidor Web.} En la elección de servidor Web se han considerado tres posibilidades: ISS (Internet Information Server), Apache Web Server y Glassfish. Finalmente se ha decidido por Apache puesto que es el más extendido en la programación Web.	
+	\item \textbf{Sistema Operativo.} El Sistema Operativo que tienen instalados los equipos y bajo el cuál se desarrollará la aplicación será Mac OS X, aunque el sistema final podrá ejecutarse desde cualquier plataforma que soporte PHP y que permita disponer de una base de datos.
+	\item \textbf{Entorno de trabajo.} Si bien se ha escogido la opción Mac OS por la comodidad que supone su manejo, se ha hecho uso de máquinas virtuales para hacer pruebas en Windows y Linux.
+\end{itemize}
+
+\section{Recursos}
+
+A lo largo de este proyecto se han hecho uso de una serie de recursos que según su naturaleza pueden ser clasificados en recursos humanos, recursos hardware y recursos software.
+
+\subsection{Recursos humanos}
+
+Son recursos referidos al personal requerido para la creación, dirección y desarrollo del proyecto.
+
+\begin{itemize}
+	\item Director del proyecto D. Cristóbal Romero Morales
+	\item Autor D. Antonio Jesús González León
+\end{itemize}
+
+\subsection{Recursos Hardware}
+
+Determinan los dispositivos hardware utilizados para la creación del sistema.
+
+\begin{itemize}
+	\item Ordenador Macbook Pro 2,66 GHz Intel Core i7, 4 GB RAM, 300 Gb de disco duro.
+\end{itemize}
+
+\subsection{Recursos Software}
+
+Determinan qué herramientas software van a ser necesarias para la creación y desarrollo del sistema. Entre los recursos software se encuentran cada uno de los programas, sistemas operativos, herramientas de programación y de utilidades que han sido utilizadas a lo largo del proyecto.
+Los recursos software disponibles son:
+
+\begin{itemize}
+	\item Sistema Operativo
+	\begin{itemize}
+		\item Mac OS X Lion 10.7.4
+		\item Microsoft Windows XP
+		\item GNU/Linux Ubuntu 12.04 LTS
+		\item Oracle VM VirtualBox 
+	\end{itemize}
+	
+	\item Entorno de Programación
+	\begin{itemize}
+		\item Aptana Studio 3
+		\item MAMP Server 2.0
+		\item Apache/2.2.21 (Unix) mod\_ssl/2.2.21 OpenSSL/0.9.8r DAV/2 PHP/5.3.6
+		\item MySQL 5.5.9
+		\item PHP Version 5.3.6
+		\item Mozilla Firefox
+		\item Internet Explorer
+		\item Google Chrome
+		\item Safari
+		\item Extensión Firebug para Mozilla Firefox
+		\item Moodle v 1.9
+		\item Moodle v 2.1
+	\end{itemize}
+	
+	\item Documentación
+	\begin{itemize}
+		\item Mactext
+		\item Latexian
+		\item \LaTeX
+		\item Bibtex
+		\item DIA
+		\item GNU Image Manipulation Program (GIMP)
+		\item Adobe Photoshop CS5
+		\item Adobe Acrobat 9.0
+	\end{itemize}
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

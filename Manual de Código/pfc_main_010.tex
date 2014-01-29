@@ -1,0 +1,55 @@
+%!TEX root=./pfc.tex
+\chapter[Introducción]{\label{}
+Introducción}
+
+En este manual se describe el código utilizado en cada uno de los ficheros que compone la aplicación desarrollada para realizar un entorno de edición de código colaborativo en lenguaje C para Moodle. Debido a que este Sistema de Administración de Cursos es mantenido aún tanto en su versión 1.* como en la 2.*, este proyecto puede dividirse en varios subproyectos:
+
+\begin{itemize}
+	\bfseries
+	\renewcommand{\labelitemi}{$\bullet$}
+	\item Módulo para Moodle 1.x
+	\item Módulo para Moodle 2.x
+	\item Editor colaborativo
+\end{itemize}
+
+El editor colaborativo es parte común para ambas versiones, pero debido a que está escrito en otro lenguaje y a su vez es un elemento totalmente independiente, válido para cualquier LMS, también es preferible detallarlo por separado. Así, la estructura de ficheros existente será:
+
+\begin{itemize}
+	\renewcommand{\labelitemi}{$\bullet$}
+	\item Módulo para Moodle 1.x
+	\begin{description}
+		\item[Front-end:] create.php, create\_form.php, diff.php, edit.php, edit\_form.php, history.php, index.php, log.php, log\_form.php, mod\_form.php, pagelib.php, version.php, view.php, viewversion.php
+		\item[Back-end:] lib.php, localib.php
+	\end{description}
+	\newpage
+	\item Módulo para Moodle 2.x
+	\begin{description}
+		\item[Front-end:] admin.php, comments.php, comments\_form.php, create.php, create\_form.php, diff.php, edit.php, edit\_form.php, files.php, filesedit.php, filesedit\_form.php, history.php, index.php, log.php, log\_form.php, mod\_form.php, pagelib.php, version.php, view.php, viewversion.php
+		\item[Back-end:] instancecomments.php, lib.php, localib.php, map.php, overridelocks.php, prettyview.php, renderer.php, restoreversion.php, search.php
+	\end{description}
+	\item Editor colaborativo
+	\begin{description}
+		\item[Front-end:] wikichat.php, wikieditor.php 
+		\item[Back-end PHP:] editorlib.php, editorlibfn.php, unlock.php, chat/post.php
+		\item[Back-end JS:] codemirror.js, editor.js, highlight.js, lock.js, parseC.js, select.js, stringstream.js, tokenize.js, undo.js, unlock.js, util.js
+		\item[Hojas de estilo:] Ccolors.css, chat/style.css
+	\end{description}
+\end{itemize}
+
+\section{Descripción del código}
+
+Los módulos correspondientes a las versiones de Moodle han sido desarrollados en lenguaje PHP, puesto que es el lenguaje que utiliza el sistema e-learning. PHP es un acrónimo recursivo que significa PHP Hypertext Pre-processor, el cual puede ser desplegado en la mayoría de los servidores web y en casi todos los sistemas operativos y plataformas sin costo alguno. El lenguaje PHP se encuentra instalado en más de 20 millones de sitios web y en un millón de servidores.
+
+Al tratarse de un lenguaje de programación interpretado o \emph{framework} para HTML (HyperText Markup Language) no necesita de compilación, sino que es el propio servidor el que lo interpreta y crea la salida. 
+
+La estructura de ficheros es muy simple, donde tenemos un fichero principal (pagelib.php) que es el encargado de la declaración de todas las clases y posteriormente tenemos un fichero por formulario que es el que hace uso de estas clases.
+
+Con respecto al editor, y puesto que se requería que este actuara en tiempo real, se ha decidido utilizar como lenguaje Javascript. JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico.
+
+Al contrario que PHP, se utiliza principalmente en su forma \emph{client-side}, lo que nos permite mejoras en el interfaz y sobretodo dinamismo en base al cliente. Unido a las ventajas de este lenguaje es que se ha utilizado su biblioteca \emph{JQuery}, la cual nos permite simplificar la manera de interactuar con los documentos HTML, manipular el árbol DOM, manejar eventos, desarrollar animaciones y agregar interacción con la técnica AJAX a páginas web.
+
+Todos los archivos Javascript del proyecto se encuentran dentro del directorio \textbf{/js}, lo cual nos permite un acceso más directo a ellos. 
+
+Con respecto a los ficheros PHP necesarios para el editor colaborativo, también se ha considerado crear un directorio para cada uno que los represente. Por ello los ficheros para el chat se encuentran dentro del directorio \textbf{/chat}, mientras que los ficheros necesarios para el propio editor de código se encuentran en el directorio \textbf{/editors}.
+
+Por último, se ha considerado útil almacenar todas las hojas de estilo de modo conjunto, dentro del directorio \textbf{/css}.
