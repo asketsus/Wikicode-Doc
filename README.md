@@ -1,6 +1,6 @@
 #Wikicode-Doc
 
-Wikicode-Doc provides source-code in Latex programming language and images of the documents necessaries for Wikicode project documentation, together with user-friendly documentation (PDF files with Latex export). Documentation is in spanish.
+Wikicode-Doc provides source-code in Latex programming language and images of the documents necessaries for Wikicode project documentation, together with user-friendly documentation (PDF files after Latex export). Documentation in spanish.
 
 ######Version:
 20120903
